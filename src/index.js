@@ -22,8 +22,10 @@ module.exports = function toReadable(number) {
             result += ' ' + tens[numStr[1]];
         }
 
-        if (numStr[0] !== '0') {
+        if (numStr[0] !== '0' && numStr[1] !== '0') {
             result += ' ' + singleDigits[numStr[0]];
+        } else if (numStr[0] !== '0') {
+            result += singleDigits[numStr[0]];
         }
     }
 
